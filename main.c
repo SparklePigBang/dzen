@@ -362,6 +362,7 @@ set_docking_ewmh_info(Display *dpy, Window w, int dock) {
 		strut_s[3] = strut[3];
 	}
 
+/* Don't set any struts. I don't want any struts.
 	if(strut[2] != 0 || strut[3] != 0) {
 		XChangeProperty(
 				dpy,
@@ -384,6 +385,7 @@ set_docking_ewmh_info(Display *dpy, Window w, int dock) {
 				4
 				);
 	}
+*/
 
 	if(dock) {
 		type = XInternAtom(dpy, "_NET_WM_WINDOW_TYPE_DOCK", False);
