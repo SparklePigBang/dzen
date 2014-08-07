@@ -1135,6 +1135,9 @@ main(int argc, char *argv[]) {
 			XMapWindow(dzen.dpy, dzen.slave_win.line[i]);
 	}
 
+	/* Reposition the window back to where it should be */
+	XMoveWindow(dzen.dpy,dzen.title_win.win,dzen.title_win.x,dzen.title_win.y);
+
 	if( fnpre != NULL )
 		font_preload(fnpre);
 
